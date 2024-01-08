@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+ 
+ {% for escort in escorts %}
+ <div class="card" style="width: 18rem;">
+    <img src={{escort.image}} class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">{{escort}}</p>
+    </div>
+  </div>
+ {% endfor %}
+    
+{% endblock content %}
