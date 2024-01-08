@@ -3,13 +3,20 @@
 
 {% block content %}
  
- {% for escort in escorts %}
- <div class="card" style="width: 18rem;">
-    <img src={{escort.image}} class="card-img-top" alt="...">
-    <div class="card-body">
-      <p class="card-text">{{escort}}</p>
+ 
+ <div class="container">
+    <div class="row">
+        {% for escort in escorts %}
+        <div class="card col-md-4 " style="width: 18rem;">
+            <img src={{escort.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+              <p class="card-text">{{escort}}</p>
+            </div>
+          </div>
+        {% endfor %}
     </div>
-  </div>
- {% endfor %}
+ </div>
+ 
+ 
     
 {% endblock content %}
