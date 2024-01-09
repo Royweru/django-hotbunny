@@ -6,42 +6,31 @@
  
  <div class="container">
     <div class="row gx-2">
-    <div class=" col-md-4">
-     
-     {% for location in locations  %}
-        <div class=" p-3 bg-danger text-dark me-2">
-           <h2>
-            {{location}}
-           </h2>
+
+    <div class=" col-md-4 gap-y-5">
+     <div class="  p-2 " style="width: 100%; border-radius:30px; display:flex; flex-direction:column; background-color:white; align-items:center; ">
+        <div>
+            <h3 class=" text-danger" style="font-family:fantasy">
+                What's your location?
+            </h3>
         </div>
-     {% endfor %}
-        
+        {% for location in locations  %}
+        {% include 'components/locations-bar.html' %}
+      {% endfor %}
+     </div>
+
     </div>
-     <div class=" col-md-7 bg-secondary">
-       <div class=" container">
-          <div class=" row  w-full">
-            {% for escort in escorts %}
-            <div class="card col-12 col-md-6" style="width: 18rem;">
-                <img src="{{escort.image}}" class="card-img-top" alt="..." style="height: 200px; width:100%;">
-                <div class="card-body">
-                  <h5 class="card-title text-success" >{{escort}}</h5>
-                  <p class="card-text"
-                  style=" font-family:Georgia, 'Times New Roman', Times, serif;">
-                    {{escort.description}}
-                </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item text-warning">Phone No: {{escort.phoneNo}}</li>
-                </ul>
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-              </div>
-            {% endfor %}
+
+    <div class="col-md-7 " style="background-color:rgb(249, 173, 173)">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 gap-x-4 p-3">
+                {% for escort in escorts %}
+                  {% include 'components/card.html' %}
+                {% endfor %}
+            </div>
         </div>
-          </div>
-       </div>
+    </div>
+    
      </div>
     </div>
      
