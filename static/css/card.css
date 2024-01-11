@@ -1,0 +1,9 @@
+.special-card{
+    width: 100%;
+    padding: 0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    background-color: whitesmoke;
+}

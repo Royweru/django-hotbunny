@@ -8,20 +8,20 @@
     <div class="row gx-2">
 
     <div class=" col-md-4 gap-y-5">
-     <div class="  p-2 " style="width: 100%; border-radius:30px; display:flex; flex-direction:column; background-color:white; align-items:center; ">
         <div>
             <h3 class=" text-danger" style="font-family:fantasy">
                 What's your location?
             </h3>
         </div>
+     <div class=" p-2 row row-cols-md-5 gap-3" style="width: 100%; border-radius:30px;background-color:white;; ">
+    
         {% for location in locations  %}
         {% include 'components/locations-bar.html' %}
       {% endfor %}
      </div>
-
     </div>
 
-    <div class="col-md-7 " style="background-color:rgb(249, 173, 173)">
+    <div class="col-md-8 " style="background-color:rgb(249, 173, 173); border-radius:15px;">
         <div class="container">
             <div class="row row-cols-1 row-cols-md-2 gap-x-4 p-3">
                 {% for escort in escorts %}
