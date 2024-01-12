@@ -7,8 +7,3 @@ body{
     height: 100vh;
 }
 
-#location-bar:hover{
-    cursor: pointer;
-    opacity: 0.8;
-    background-color: rgb(246, 105, 105);
-}

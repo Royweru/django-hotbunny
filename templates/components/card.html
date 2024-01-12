@@ -1,19 +1,27 @@
-<div class="col mb-4">
-    <!-- mb-4 adds margin-bottom to create space between cards -->
-    <div class="special-card">
-        <img src="{{escort.image}}" class="card-img-top" alt="..." style="height: 200px; width:100%;">
-        <div class="card-body">
-            <h5 class="card-title text-success">{{escort}}</h5>
-            <p class="card-text" style="font-family:Georgia, 'Times New Roman', Times, serif;">
-                {{escort.description}}
-            </p>
-        </div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item text-warning">Phone No: {{escort.phoneNo}}</li>
-        </ul>
-        <div class="card-body">
-            <a href="{% url 'view-escort' escort.id%}" class="card-link">More info...</a>
-            
+
+    <div class="col mb-4">
+        <!-- mb-4 adds margin-bottom to create space between cards -->
+        <div class="special-card" >
+            <img src="{{escort.image}}" class="card-img-top" alt="..." style="height: 200px; width:100%; aspect-ratio: square;">
+            <div class="card-body">
+                <h5 style="color: rgb(195, 105, 77); font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight:bold; text-decoration:underline;">{{escort}}</h5>
+                <p  style="font-family:Verdana, Geneva, Tahoma, sans-serif; font-weight:lighter; font-size:small;">
+                    {{escort.location}}
+                </p>
+            </div>
+            <div class=" card-body">
+               <p style="font-family:fantasy; font-size:15px; font-weight:lighter">
+               Hey there, know more about this hot escort {{escort}} from {{escort.location}}, click on more info to find out...
+               </p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item " style="color: red;">Phone No: 0{{escort.phoneNo}}</li>
+            </ul>
+            <a href="">
+                <div>
+                    more info...
+                </div>
+            </a>
         </div>
     </div>
-</div>
+
