@@ -1,7 +1,20 @@
 {% extends "main.html" %}
 
 {% block content %}
-    <h1>
-        Individual escort page for {{escort}}
-    </h1>
+   <div class="container bg-light p-4">
+     <div class="row">
+
+      <div class=" col-12 col-md-6" style="  border-radius:15px;">
+        <div>
+            <img src="{{escort.image}}" alt="" style=" height:200px; width:100%; position:relative; height:300px;">
+        </div>
+         <div>
+            <h1>
+                {{escort}}
+            </h1>
+         </div>
+      </div>
+      
+         </div>
+   </div>
 {% endblock content %}
